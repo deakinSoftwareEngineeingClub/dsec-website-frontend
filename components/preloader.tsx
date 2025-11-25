@@ -11,6 +11,8 @@ gsap.registerPlugin(DrawSVGPlugin);
 function PreLoader() {
 	const { hasPreloaded, setHasPreloaded } = useLoader();
 
+	const preloaderContainerRef = useRef<HTMLDivElement>(null);
+	const logoRefContainer = useRef<HTMLDivElement>(null);
 	const logoRef = useRef<SVGSVGElement>(null);
 
 	useEffect(() => {
@@ -20,6 +22,15 @@ function PreLoader() {
 		const paths = svgElement.querySelectorAll("path");
 
 		const tl = gsap.timeline();
+
+		tl.to(logoRefContainer.current, {
+			clipPath: "inset(0% 0% 0% 0%)",
+			duration: 0,
+		});
+		tl.to(preloaderContainerRef.current, {
+			clipPath: "inset(0% 0% 0% 0%)",
+			duration: 0,
+		});
 
 		tl.fromTo(
 			paths,
@@ -45,13 +56,41 @@ function PreLoader() {
 			},
 			"-=0.5"
 		);
+
+		tl.to(
+			logoRefContainer.current,
+			{
+				clipPath: "inset(0% 0% 100% 0%)",
+				duration: 0.8,
+				ease: "power2.inOut",
+				onComplete: () => {
+					if (logoRefContainer.current)
+						logoRefContainer.current.style.display = "none";
+				},
+			},
+		);
+
+		tl.to(
+			preloaderContainerRef.current,
+			{
+				clipPath: "inset(0% 0% 100% 0%)",
+				duration: 0.8,
+				ease: "power2.inOut",
+			}
+		)
 	}, [setHasPreloaded]);
 
 	return (
 		<>
-			<div className="fixed h-svh w-screen overflow-hidden z-50 pointer-events-auto top-0 left-0">
-				<div className="bg-primary w-full h-full top-0 absolute flex justify-center items-center">
-					<div className="overflow-hidden">
+			<div
+				className="fixed h-svh w-screen overflow-hidden z-50 pointer-events-auto top-0 left-0"
+				ref={preloaderContainerRef}
+			>
+				<div className="bg-foreground w-full h-full top-0 absolute flex justify-center items-center">
+					<div
+						className="overflow-hidden"
+						ref={logoRefContainer}
+					>
 						<LoaderLogo ref={logoRef} />
 					</div>
 				</div>
