@@ -36,7 +36,7 @@ function PreLoader() {
 			paths,
 			{ drawSVG: "0%" },
 			{
-				duration: 2,
+				duration: 1,
 				drawSVG: "100%",
 				stagger: 0.2,
 				ease: "power2.inOut",
@@ -76,7 +76,8 @@ function PreLoader() {
 				clipPath: "inset(0% 0% 100% 0%)",
 				duration: 0.8,
 				ease: "power2.inOut",
-			}
+			},
+			"+=0.2"
 		)
 	}, [setHasPreloaded]);
 
