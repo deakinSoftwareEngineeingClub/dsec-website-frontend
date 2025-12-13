@@ -4,13 +4,10 @@ import Button from "@/components/button";
 
 export default function Hero() {
     return (
-        <section className={"h-screen max-h-[900px] relative"}>
-
-
+        <section className={"max-h-[800px] relative"}>
             <div className={"h-full w-full flex flex-col justify-start relative z-20 pointer-events-none overflow-hidden"}>
 
                 {/*background section*/}
-
                 <div className={"fixed left-0 w-full h-full -z-10 pointer-events-auto"}>
                     <PixelBlast
                         variant="circle" // can be square, circle, diamond, triangle
@@ -43,18 +40,19 @@ export default function Hero() {
 
                 <div className={"flex flex-col gap-4 lg:gap-8 max-w-[1300px] pt-[24px] md:pt-[48px] lg:pt-[160px]"}>
                     <div className={"flex flex-col"}>
-                        <GradientText text={"JOIN US FOR T1 STALL"} className={"text-sm md:text-base font-semibold font-cta"} />
-                        {/*<p className={"font-semibold text-sm font-cta"}>JOIN US FOR T1 STALL</p>*/}
-                        <h1 className={"text-4xl md:text-6xl lg:text-9xl"}>Deakin's Home for Software Engineers</h1>
+                        <GradientText className={"text-sm md:text-base font-semibold font-cta"}>JOIN US OR T1 STALL</GradientText>
+                        <h1 className={"text-5xl md:text-6xl lg:text-9xl"}>Deakin's Home for Software Engineers</h1>
                     </div>
-                    <p className={"text-xs sm:text-base lg:text-xl max-w-[1200px]"}>Join the Deakin Software Engineering Club at Burwood to design,
+                    <p className={"text-base lg:text-xl max-w-[1200px]"}>
+                        Join the Deakin Software Engineering Club at Burwood to design,
                         build, and ship real software with other students. Learn modern
                         tools, work in agile teams, and leave uni with a portfolio that
-                        gets you noticed by recruiters.</p>
+                        gets you noticed by recruiters.
+                    </p>
                     <div>
-                    <div className={"flex gap-4"}>
-                        <Button className={"text-sm h-[20px] md:h-[30px] lg:text-base lg:h-[40px]"} type={"primary"}>Join Now</Button>
-                        <Button className={"text-sm h-[20px] md:h-[30px] lg:text-base lg:h-[40px]"} type={"outline"}>Learn More</Button>
+                    <div className={"flex gap-4 justify-start"}>
+                        <Button type={"primary"}>Join Now</Button>
+                        <Button  type={"outline"}>Learn More</Button>
                     </div>
                 </div>
 

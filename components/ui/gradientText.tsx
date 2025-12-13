@@ -1,6 +1,6 @@
-export default function GradientText({text, className} : {
-    text: string;
-    className: string | null
+export default function GradientText({children, className} : {
+    children: React.ReactNode
+    className?: string | null
 }) {
 
     const gradientStyle: React.CSSProperties = {
@@ -13,7 +13,9 @@ export default function GradientText({text, className} : {
         letterSpacing: "-1px"
     };
 
+    const sizing = ""
+
     return (
-        <p className={`w-fit ${className || ""}`} style={gradientStyle}>{text}</p>
+        <p className={`w-fit ${className || ""}`} style={gradientStyle}>{children}</p>
     )
 }
