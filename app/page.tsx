@@ -1,13 +1,12 @@
-import Hero from "@/components/hero";
-import Navbar from "@/components/navbar";
-import PreLoader from "@/components/preloader";
+import Hero from "@/components/home/hero/hero";
+import About from "@/components/home/about/about";
 
 export default function Home() {
-  return (
-    <>
-      <PreLoader />
-      <Navbar />
-      <Hero />
-    </>
-  );
+    return (
+        <div className={"flex flex-col"}>
+            {/* TODO: uncomment this: <PreLoader />*/}
+            <Hero />
+            <About />
+        </div>
+    );
 }

@@ -1,69 +1,26 @@
 "use client";
 
-import { useViewTransition } from "@/hooks/useViewTransition";
-import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
+import { Menu } from 'lucide-react';
 
-//todo: needs to be cleaned up
+import Image from "next/image";
 
-const Navbar = () => {
-	const { navigateWithTransition } = useViewTransition();
-
+export default function Navbar() {
 	return (
-		<header className="flex justify-center">
-			<nav className="flex items-center justify-between max-w-7xl py-4 w-full px-4">
-				<div>
-					<img src="logo.png" alt="DSEC logo" className="h-12" />
-				</div>
+        <div className={"fixed px-[20px] md:px-[80px] lg:px-[160px] left-0 top-0 w-full h-[48px] md:h-[72px] flex items-center justify-between bg-background z-50"}>
+            <Image className={"w-[42px] md:w-[72px] cursor-pointer"} width={983} height={612}  src="/logo.png" alt="DSEC logo"/>
 
-				<div className="bg-linear-to-b from-background to-card border-2 border-border rounded-full px-4 py-3">
-					<ul className="flex">
-						<li>
-							<a href="/home" className="nav-link">
-								Home
-							</a>
-						</li>
-						<li>
-							<a
-								href="/about"
-								onClick={(e) => {
-									e.preventDefault();
-									navigateWithTransition("/about");
-								}}
-								className="nav-link"
-							>
-								About
-							</a>
-						</li>
-						<li>
-							<a href="/work-with-us" className="nav-link">
-								Work With Us
-							</a>
-						</li>
-						<li>
-							<a href="/events" className="nav-link">
-								Events
-							</a>
-						</li>
-						<li>
-							<a href="/projects" className="nav-link">
-								Projects
-							</a>
-						</li>
-					</ul>
-				</div>
+            {/*this is shown if the screen is large enough else hidden */}
+            <ul className={"gap-8 items-center hidden lg:flex w-fit p-1 px-6 bg-primary rounded-2xl"}>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Membership</li>
+                <li>Recruitment</li>
+                <li>Contact Us</li>
+            </ul>
 
-				<div className="flex items-center gap-4">
-					<AnimatedThemeToggler duration={600} />
-					<a
-						href="/join-us"
-						className="px-4 py-2 bg-primary text-background rounded-full"
-					>
-						Join Us
-					</a>
-				</div>
-			</nav>
-		</header>
+            {/*hamburger for phones / small screens :)*/}
+            <Menu className={"max-w-[42px] lg:hidden cursor-pointer"} />
+        </div>
 	);
 };
 
-export default Navbar;
