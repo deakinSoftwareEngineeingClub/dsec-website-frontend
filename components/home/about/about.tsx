@@ -1,3 +1,4 @@
+import CircularText from "@/components/ui/circularText";
 import GradientText from "@/components/ui/gradientText";
 import Button from "@/components/button";
 import SellingPoint from "@/components/home/about/sellingPoint";
@@ -39,6 +40,14 @@ export default function About() {
                 <div>
                     <Button type={"accent2"}>Become a Partner</Button>
                 </div>
+{/*                <div className={"absolute right-10 bottom-36"}>
+                    <CircularText
+                        text="DEAKIN &middot; SOFTWARE &middot; ENGINEERING &middot; CLUB &middot; "
+                        onHover="pause"
+                        spinDuration={20}
+                        className="custom-class"
+                    />
+                </div>*/}
             </div>
         </section>
     )

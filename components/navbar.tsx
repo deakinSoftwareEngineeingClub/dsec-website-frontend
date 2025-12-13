@@ -6,8 +6,7 @@ import Image from "next/image";
 
 export default function Navbar() {
 	return (
-        <div className={"w-full h-[48px] md:h-[72px] pt-2 flex items-center justify-between bg-background mt-2"}>
-
+        <div className={"fixed px-[20px] md:px-[80px] lg:px-[160px] left-0 top-0 w-full h-[48px] md:h-[72px] flex items-center justify-between bg-background z-50"}>
             <Image className={"w-[42px] md:w-[72px] cursor-pointer"} width={983} height={612}  src="/logo.png" alt="DSEC logo"/>
 
             {/*this is shown if the screen is large enough else hidden */}
