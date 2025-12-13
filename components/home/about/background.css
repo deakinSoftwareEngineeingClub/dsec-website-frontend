@@ -1,0 +1,7 @@
+.about__radial-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #D63384;
+    background: radial-gradient(circle at bottom,rgba(214, 51, 132, 1) 0%, rgba(13, 13, 13, 1) 67%);
+}

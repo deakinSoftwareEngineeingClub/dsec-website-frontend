@@ -3,7 +3,7 @@ import About from "@/components/home/about/about";
 
 export default function Home() {
     return (
-        <div className={"flex flex-col gap-32"}>
+        <div className={"flex flex-col"}>
             {/* TODO: uncomment this: <PreLoader />*/}
             <Hero />
             <About />

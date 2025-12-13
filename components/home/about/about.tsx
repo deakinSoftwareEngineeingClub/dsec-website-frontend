@@ -1,13 +1,26 @@
 import GradientText from "@/components/ui/gradientText";
 import Button from "@/components/button";
 import SellingPoint from "@/components/home/about/sellingPoint";
+import CircularText from "@/components/ui/circularText";
+import "./background.css"
 
 export default function About() {
+
+    const radialBg = "bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-[#D63384] to-[#0D0D0D]";
+
     return (
         <section className={"h-screen w-full flex flex-col justify-center relative py-32"}>
-            <div className={"flex flex-col relative pointer-events-none h-full justify-around max-h-[70vh] "}>
+
+            <div className={"about__radial-bg"}>
+
+            </div>
+
+
+            <div
+                className={"flex flex-col relative pointer-events-none h-full justify-around max-h-[70vh]  px-[20px] md:px-[80px] lg:px-[160px]"}>
                 <div className={"flex flex-col"}>
-                    <GradientText className={"text-sm md:text-base font-semibold font-cta"}>WHY DSEC EXISTS</GradientText>
+                    <GradientText className={"text-sm md:text-base font-semibold font-cta"}>WHY DSEC
+                        EXISTS</GradientText>
                     <h1 className={"text-3xl lg:text-7xl"}>More Than a Regular Coding Club</h1>
                 </div>
                 <p className={"text-base lg:text-xl sm:max-w-[60vw]"}>
@@ -28,17 +41,10 @@ export default function About() {
                         body={`Meet motivated Deakin students who are already working in project teams.`}
                     />
                 </div>
-                <div className={"mt-2"}>
+                <div className={"mt-2 flex justify-between"}>
                     <Button type={"accent2"}>Become a Partner</Button>
                 </div>
-{/*                <div className={"absolute right-10 bottom-36"}>
-                    <CircularText
-                        text="DEAKIN &middot; SOFTWARE &middot; ENGINEERING &middot; CLUB &middot; "
-                        onHover="pause"
-                        spinDuration={20}
-                        className="custom-class"
-                    />
-                </div>*/}
+
             </div>
         </section>
     )

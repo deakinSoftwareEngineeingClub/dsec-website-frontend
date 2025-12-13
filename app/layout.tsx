@@ -33,7 +33,7 @@ export default function RootLayout({
         // fonts
 		<html lang="en" className={`${spaceGrotesk.className} ${inter.variable}`}>
             {/*100px gutter (left and right) on medium+ sizes*/}
-			<body className={`px-[20px] md:px-[80px] lg:px-[160px]`}>
+			<body className={``}>
 				<ViewTransitions>
 					<LoaderProvider>
                         <Navbar />
