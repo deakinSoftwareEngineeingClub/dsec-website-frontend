@@ -1,43 +1,34 @@
-import CircularText from "@/components/ui/circularText";
 import GradientText from "@/components/ui/gradientText";
 import Button from "@/components/button";
 import SellingPoint from "@/components/home/about/sellingPoint";
 
 export default function About() {
     return (
-        <section className={"h-screen max-h-[800px] relative"}>
-            <div className={"flex flex-col gap-8 lg:gap-16 max-w-[1300px]"}>
+        <section className={"h-screen w-full flex flex-col justify-center relative py-32"}>
+            <div className={"flex flex-col relative pointer-events-none h-full justify-around max-h-[70vh] "}>
                 <div className={"flex flex-col"}>
                     <GradientText className={"text-sm md:text-base font-semibold font-cta"}>WHY DSEC EXISTS</GradientText>
-                    <h1 className={"text-4xl lg:text-7xl"}>More Than a Regular Coding Club</h1>
+                    <h1 className={"text-3xl lg:text-7xl"}>More Than a Regular Coding Club</h1>
                 </div>
-                <p className={"text-base lg:text-xl max-w-[1200px]"}>
+                <p className={"text-base lg:text-xl sm:max-w-[60vw]"}>
                     The Deakin Software Engineering Club is the official home for students who want to turn
-                    lectures into real software experience. We bring together software engineering, computer
-                    science, IT, and design students at the Burwood campus to collaborate on projects, share
-                    knowledge, and support each other through uni.
+                    lectures into real software experience.
                 </p>
-                <div className={"grid grid-cols-1 gap-4 lg:grid-cols-2"}>
+                <div className={"grid grid-cols-2 gap-8 md:gap-16 sm:max-w-[60vw]"}>
                     <SellingPoint
                         className={"col-span-1"}
                         num={"01"}
                         forWho={"For Students"}
-                        body={`Build portfolio ready software in project teams, not just solo assignments. Learn industry 
-                        workflows like Git, code reviews, agile sprints, and CI tools. Join coding nights, technical 
-                        workshops, and guest talks with engineers and alumni. Prepare for internships and grad roles with 
-                        peer support and practical experience`}
+                        body={`Build portfolio ready software in project teams, not just solo assignments.`}
                     />
                     <SellingPoint
                         className={"col-span-1"}
                         num={"02"}
-                        forWho={"For Industry & Deakin Staff"}
-                        body={`Meet motivated Deakin students who are already working in project teams. Explore 
-                        collaboration on hackathons, workshops, and sponsored challenges. Partner with DSEC to share tools, 
-                        datasets, or problem statements for student projects. Build a talent pipeline by engaging with 
-                        students before they graduate`}
+                        forWho={"For Industry"}
+                        body={`Meet motivated Deakin students who are already working in project teams.`}
                     />
                 </div>
-                <div>
+                <div className={"mt-2"}>
                     <Button type={"accent2"}>Become a Partner</Button>
                 </div>
 {/*                <div className={"absolute right-10 bottom-36"}>
