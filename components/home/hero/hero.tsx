@@ -1,12 +1,13 @@
 import PixelBlast from "@/components/home/hero/PixelBlast"
 import GradientText from "@/components/ui/gradientText";
+import Button from "@/components/button";
 
 export default function Hero() {
     return (
         <section className={"h-screen max-h-[900px] relative"}>
 
 
-            <div className={"h-full w-full flex flex-col justify-start relative z-20 pointer-events-none pt-[1vh] overflow-hidden"}>
+            <div className={"h-full w-full flex flex-col justify-start relative z-20 pointer-events-none overflow-hidden"}>
 
                 {/*background section*/}
 
@@ -40,7 +41,7 @@ export default function Hero() {
 
                 {/*content section*/}
 
-                <div className={"flex flex-col gap-8 max-w-[1300px] lg:pt-[160px]"}>
+                <div className={"flex flex-col gap-4 lg:gap-8 max-w-[1300px] pt-[24px] md:pt-[48px] lg:pt-[160px]"}>
                     <div className={"flex flex-col"}>
                         <GradientText text={"JOIN US FOR T1 STALL"} className={"text-sm md:text-base font-semibold font-cta"} />
                         {/*<p className={"font-semibold text-sm font-cta"}>JOIN US FOR T1 STALL</p>*/}
@@ -51,6 +52,10 @@ export default function Hero() {
                         tools, work in agile teams, and leave uni with a portfolio that
                         gets you noticed by recruiters.</p>
                     <div>
+                    <div className={"flex gap-4"}>
+                        <Button className={"text-sm h-[20px] md:h-[30px] lg:text-base lg:h-[40px]"} type={"primary"}>Join Now</Button>
+                        <Button className={"text-sm h-[20px] md:h-[30px] lg:text-base lg:h-[40px]"} type={"outline"}>Learn More</Button>
+                    </div>
                 </div>
 
                 </div>
