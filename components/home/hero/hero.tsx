@@ -30,7 +30,7 @@ export default function Hero() {
 
             <div className={"flex flex-col relative pointer-events-none h-full justify-around max-h-[50vh] sm:max-h-[60vh] px-[20px] md:px-[80px] lg:px-[160px]"}>
                 <div className={"flex flex-col "}>
-                    <GradientText className={"text-sm md:text-base font-semibold font-cta"}>JOIN US OR T1 STALL</GradientText>
+                    <GradientText className={"text-sm md:text-base font-semibold font-sans"}>JOIN US FOR T1 STALL</GradientText>
                     <h1 className={"text-4xl sm:5xl md:text-6xl lg:text-8xl max-w-[80vw]"}>Deakin's Home for Software Engineers</h1>
                 </div>
                 <p className={"text-base lg:text-xl max-w-[70vw]"}>

@@ -14,9 +14,9 @@ export default function SellingPoint({
     return (
         <div className={final}>
             <div>
-                <h2 className={"text-4xl lg:text-8xl"}>{num}</h2>
+                <h2 className={"text-4xl lg:text-8xl font-mono"}>{num}</h2>
                 <hr className={"h-[1px] lg:h-[2px]"}/>
-                <h3 className={"text-2xl lg:text-4xl"}>{forWho}</h3>
+                <h3 className={"text-2xl lg:text-4xl font-display"}>{forWho}</h3>
             </div>
             <p>{body}</p>
         </div>

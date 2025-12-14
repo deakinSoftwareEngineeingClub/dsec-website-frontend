@@ -1,22 +1,28 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { ViewTransitions } from "next-view-transitions";
 import "./globals.css";
 
 import { LoaderProvider } from "./loader-context";
 import Navbar from "@/components/navbar";
 
-// fonts
+//* Fonts
 const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-cta", // Defines the CSS variable name automatically
-    display: "swap",
+	subsets: ["latin"],
+	variable: "--font-sans", 
+	display: "swap",
 });
 
 const spaceGrotesk = Space_Grotesk({
-    subsets: ["latin"],
-    variable: "--font-main", // Defines the CSS variable name automatically
-    display: "swap",
+	subsets: ["latin"],
+	variable: "--font-display", 
+	display: "swap",
+});
+
+const jetBrainsMono = JetBrains_Mono({
+	subsets: ["latin"],
+	variable: "--font-mono", 
+	display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -30,15 +36,15 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-        // fonts
-		<html lang="en" className={`${spaceGrotesk.className} ${inter.variable}`}>
-            {/*100px gutter (left and right) on medium+ sizes*/}
+		// fonts
+		<html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${jetBrainsMono.variable}`}>
+			{/*100px gutter (left and right) on medium+ sizes*/}
 			<body className={``}>
 				<ViewTransitions>
 					<LoaderProvider>
-                        <Navbar />
-                        {children}
-                    </LoaderProvider>
+						<Navbar />
+						{children}
+					</LoaderProvider>
 				</ViewTransitions>
 			</body>
 		</html>

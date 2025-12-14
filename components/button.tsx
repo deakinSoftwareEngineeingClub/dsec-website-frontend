@@ -25,7 +25,7 @@ export default function Button({
         transparent: ""
     };
 
-    const baseStyles = "flex items-center justify-center px-2 font-cta min-h-[15px] aspect-[5/1] rounded-[66px] pointer-events-auto cursor-pointer";
+    const baseStyles = "flex items-center justify-center px-2 font-sans min-h-[15px] aspect-[5/1] rounded-[66px] pointer-events-auto cursor-pointer";
     const sizingStyles = "text-sm h-[30px] lg:text-base lg:h-[40px]"
 
     const final = `

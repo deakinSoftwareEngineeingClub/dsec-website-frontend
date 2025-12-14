@@ -19,7 +19,7 @@ export default function About() {
             <div
                 className={"flex flex-col relative pointer-events-none h-full justify-around max-h-[70vh]  px-[20px] md:px-[80px] lg:px-[160px]"}>
                 <div className={"flex flex-col"}>
-                    <GradientText className={"text-sm md:text-base font-semibold font-cta"}>WHY DSEC
+                    <GradientText className={"text-sm md:text-base font-semibold font-sans"}>WHY DSEC
                         EXISTS</GradientText>
                     <h1 className={"text-3xl lg:text-7xl"}>More Than a Regular Coding Club</h1>
                 </div>
