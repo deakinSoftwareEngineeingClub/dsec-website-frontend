@@ -112,7 +112,7 @@ export class GridRevealTransition implements TransitionStrategy {
     public async end(): Promise<void> {
         return new Promise((resolve) => {
             const blocks = this.transitionBlocks.map((b) => b.element);
-            const transitionGrid = document.querySelector(".transition-grid") as HTMLElement;
+            const transitionGrid = document.getElementById(this.containerId) as HTMLElement;
 
             if (blocks.length === 0) {
                 resolve();
